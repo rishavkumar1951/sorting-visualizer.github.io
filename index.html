@@ -1,74 +1,456 @@
-<!DOCTYPE html>
-
-
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorting Visualizer</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Rishav Kumar">
+    <link rel="icon" type="image/x-icon" style="color: aliceblue;"  href="/images/r.png">
 
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Rishav Kumar</title>
 
-</head>
-<body>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/93c4eac8ff.js" crossorigin="anonymous"></script>
 
-    <header>
-        <nav>
-            <div class="array-inputs">
-                <p>Size of the array:</p>
-                <input id="a_size" type="range" min=20 max=150 step=1 value=80>
-                <p>Speed of the algorithm:</p>
-                <input id="a_speed" type="range" min=1 max=5 step=1 value=4>
-                <button id="a_generate">Generate New Array!</button>
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    
+    <style>
+      .fa-icon {
+        padding: 20px;
+        font-size: 50px;
+        width: 70px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 10%;
+      }
+      .avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        /* background-color: DodgerBlue; */
+      }
+
+      .flex-container > div {
+        background-color: #f1f1f1;
+        width: 162px;
+        height: 162px;
+        /* margin: 10px; */
+        text-align: center;
+        /* line-height: 75px; */
+        font-size: 30px;
+      }
+     
+    </style>
+    
+
+  </head>
+  <body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <!-- <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i> Rishav</a> -->
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="#project" class="nav-link"><span data-hover="Work">Work</span></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link"><span data-hover="Career">Career</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#tech" class="nav-link"><span data-hover="Technology Stack">Technology Stack</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#projects" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#cert" class="nav-link"><span data-hover="Certificate">Certificate</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                      <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                        <i class="color-mode-icon"></i>
+                        Color mode
+                      </div>
+                    </div>
+                </ul>
             </div>
+        </div>
+    </nav>
 
-            <div class="header_right">
-                <p class="nav-heading">Sorting visualizer</p>
+    <!-- ABOUT -->
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-8 col-md-12 col-12 d-flex align-items-center">
+                    <div class="about-text" style="width: 670px;">
+                        <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small>
+                        <h1 class="animated animated-text">
+                            <span class="mr-2">Hey folks, I'm</span>
+                                <div class="animated-info">
+                                    <span class="animated-item">Rishav Kumar</span>
+                                    <span class="animated-item">Full Stack Developer</span>
+                                    <span class="animated-item">Software Engineer</span>
+                                </div>
+                        </h1>
 
-                <div class="algos" >
-                    <button style="font-size: 15px;">Bubble</button>
-                    <button style="font-size: 15px;">Selection</button>
-                    <button style="font-size: 15px;">Insertion</button>
-                    <button style="font-size: 15px;">Merge</button>
-                    <button style="font-size: 15px;">Quick</button>
-                    <button style="margin-right: 0px;font-size: 15px;">Heap</button>
+                        <p>I am passionate about technology and want to create something which will have a positive impact on society, be it for the betterment of society or for my career. I've a great zeal to learn new things that help me in developing my skills and knowledge. Being optimistic helps me achieve my goals, as well as my aim. If you feel like talking to me, please feel free to send me an <a href="mailto:rishav.dgi@gmail.com">email</a>.</p>
+                        
+                        <div class="custom-btn-group mt-4">
+                          <!-- <a href="#" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Download Resume</a> -->
+                          <a href="/images/Rishav Kumar.pdf" download="Rishav Kr Resume" class="btn custom-btn custom-btn-bg custom-btn-link" download="Rishav Kr Resume">Download Resume</a>
+                          
+                        </div>
+                    </div>
                 </div>
+
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about-image svg">
+                        <img src="images/myimg.jpg" class="img-fluid rounded hover-zoom avtar"  alt="my image">
+                    </div>
+                </div>
+
             </div>
-
-        </nav>
-    </header>
-
-    <section>
-
-        <div id="Info_Cont1">
-            <p>This is elements Container</p>
         </div>
-
-        <div id="array_container">
-            
-        </div>
-
-        <!-- <div id="Info_Cont2">
-            <p>This is Second Container</p>
-        </div> -->
-
     </section>
 
-    <footer>
+    <!-- FEATURES -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row">
 
-    </footer>
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4">Experiences</h2>
 
-    <script src="./scripts/main.js"></script>   <!--This should be at the end of body and should be loaded before sorts.js-->
-    <script src="./scripts/visualizations.js"></script>  <!--This should be loaded after main.js-->
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span>2022</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>Internship</span><small>Wipro</small></h3>
+                                  <p>This is a project based learning program where we are
+                                    trained in Java and also and worked on a project.</p>
+                             </div>
+                        </div>
 
-    <script src="./scripts/bubble_sort.js"></script>
-    <script src="./scripts/selection_sort.js"></script>
-    <script src="./scripts/insertion_sort.js"></script>
-    <script src="./scripts/merge_sort.js"></script>
-    <script src="./scripts/quick_sort.js"></script>
-    <script src="./scripts/heap_sort.js"></script>
-</body>
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2021</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Web Developer</span><small>RTSALL Tech & Solutions</small></h3>
+                                <p>
+                                  It is an IT service provider that provides solutions related to website development and digital marketing. I designed and developed website of coaching,school,shops. </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2020</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Contributor</span><small>Prepinsta</small></h3>
+                                <p>PrepInsta is no.1 and most visited website for Placements in India. PrepInsta is no.1 and most visited website for Placements in India. I contributed content related to Data structure and Algorithm in C,C++ and Java.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2014</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Junior Designer<small>Crafted Co.</small></h3>
+                                <p>Cras scelerisque scelerisque condimentum. Nullam at volutpat mi. Nunc auctor ipsum eget magna consequat viverra.</p>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4 mobile-mt-2">Educations</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span>2018-22</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>B. Tech</span><small>Computer Science</small></h3>
+                                  <p><a href="https://gnindia.dronacharya.info/" target="_blank">Dronacharya Group Of Institutions,Greater Noida,UP</a></p>
+                                   <p>75% till 7th sem.</p> 
+                                <br>
+                             </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2016-18</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Higher Secondary</span><small>PCM Major</small></h3>
+                                <p><a rel="nofollow" href="http://www.ssmcdcollegedahiarasalpur.com/" target="_blank">S.S.M.C.D College</a></p>
+                                <p>67%</p>
+                                <br>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2016</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Matriculation</span><small>Schooling</small></h3>
+                                <p><a rel="nofollow" href="#" target="_blank">St. Paul Sr. Secondary School</a></p>
+                                <p>95%</p>
+                                <br>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Add Technology Stack-->
+    <section id="tech">
+      <h2 align="center">Technology Stack</h2>
+      <div class="flex-container col-lg-9 text-center mx-auto col-12">
+        <div><img src="images/icons8-html-5.svg" style="width: 100px; height: 100px;"><br><h4>HTML</h4></div>
+        <div><img src="images/icons8-css3.svg" style="width: 100px; height: 100px;"><br><h4>CSS</h4></div>
+        <div><img src="images/icons8-javascript.svg" style="width: 100px; height: 100px;"><br><h4>Javascript</h4></div>
+        <div><i class="fa-brands fa-react " style="font-size: 90px; color: blue; padding-top: 10px;"></i><br><h4>ReactJs</h4></div>
+        <div><img src="images/icons8-nodejs.svg" style="width: 100px; height: 100px;"><br><h4>NodeJs</h4></div>
+        <div><img src="images/icons8-mongodb.svg" style="width: 100px; height: 100px;"><br><h4>Mongodb</h4></div>
+      
+        <div> <img src="images/c.svg" style="width: 100px; height: 100px;"><br><h4>C</h4></div>
+          <div><img src="https://www.freeiconspng.com/uploads/c--logo-icon-0.png" style="width: 100px; height: 100px;"alt="c++ logo image" /><br><h4>C++</h4></div>
+          <div><img src="images/java-svgrepo-com.svg" style="width: 100px; height: 100px;"><br><h4>Java</h4></div>
+          <div> <img src="images/icons8-python.svg" style="width: 100px; height: 100px;"><br><h4>Python</h4></div>
+      
+          <div><img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-algorithm-computer-programming-icons-flaticons-lineal-color-flat-icons.png" style="width: 100px; height: 100px;"/><br><h4>DS & Algo</h4></div>
+          <div><img src="images/icons8-office-365 (1).svg" style="width: 100px; height: 100px;"/><br><h4>MS-Office</h4></div>
+          <div><img src="images/cloud-solid.svg" style="width: 100px; height: 100px; color: blue;"><br><h4>Cloud Computing</h4></div>
+      </div>
+  </section>
+
+
+    <!-- Add projects-->
+    <section id="projects"><br><br>
+      <h2 align="center">Projects</h2>
+      <table class="table table-border table-hover col-lg-9 text-center mx-auto col-12">
+        <tbody>
+          <tr class="table-active">
+            <td><p style="font-weight: bold;">Desktop Voice Assistant</p>
+              <p>It is a python based Voice Assistant like Apple's siri, Google Assistant. It can perform many task by just
+                taking input as voice.
+                <p>It can perform: </p>
+                <ul class="list-group left" >
+                  <li class="list-group-item" > &#9755; Send an email.</li>
+                  <li class="list-group-item" > &#9755; Remind you for task,birthday or any special event.</li>
+                  <li class="list-group-item" > &#9755; Find available vaccine slot near you.</li>
+                  <li class="list-group-item" > &#9755; Search from wikipedia.</li>
+                  <li class="list-group-item" > &#9755; Open application installed on system,boot/reboot pc.</li>
+                  <li class="list-group-item" > &#9755; Take screenshot,click photo,record videos.</li>
+                  <li class="list-group-item" > &#9755; and many more task...</li>
+                </ul>
+              </p>
+              <span class="badge badge-warning">Tech Used : </span>
+              <span class="badge badge-success">Python</span>
+              <span class="badge badge-success">Speech Recognition</span>
+              <span class="badge badge-success">Operating System</span>
+              <span class="badge badge-success">API</span>
+              <!-- <a href="#" target="_blank" rel="noopener noreferrer" class="badge badge-primary" style="pointer-events: none">Click Me</a> -->
+            </td>
+            <!-- <td><a href="#" target="_blank" rel="noopener noreferrer">Click here</a></td> -->
+          </tr>
+          <tr class="table-active ">
+            <td>
+              <br>
+              <p style="font-weight: bold;">File Sharing App</p>
+              <ul class="list-group left" >
+              <li class="list-group-item" >This is a web application where users will upload and they will get a link so that they can easily share the file by just sending link. The second method is that our application itself will send that link through email to the recipient on the users behalf so that the recipient can download the file.
+              </li>
+            </ul>
+            <br>
+            <p>
+              <span class="badge badge-warning">Tech Used : </span>
+              <span class="badge badge-success">HTML</span>
+              <span class="badge badge-success">CSS</span>
+              <span class="badge badge-success">Javascript</span>
+              <span class="badge badge-success">Nodejs</span>
+              <span class="badge badge-success">Mongodb</span>
+              <span class="badge badge-success">NPM Modules</span>
+              <!-- <a href="#" target="_blank" rel="noopener noreferrer" class="badge badge-primary" style="pointer-events: none">Click Me</a> -->
+            </p>
+            </td>
+          </tr>
+          <tr class="table-active ">
+            <td><p style="font-weight: bold;">Algorithm Visualizer</p>
+              <ul class="list-group left" >
+              <li class="list-group-item" >A web application for visualizing Sorting Algorithms.
+              </li>
+            </ul>
+            <br>
+            <p>
+              <span class="badge badge-warning">Tech Used : </span>
+              <span class="badge badge-success">HTML</span>
+              <span class="badge badge-success">CSS</span>
+              <span class="badge badge-success">Javascript</span>
+              <span class="badge badge-success">Bootstrap</span>
+              <!-- <a href="https://rishavkumar1951.github.io/sorting-visualizer.github.io/" target="_blank" rel="noopener noreferrer" class="badge badge-primary">Click Me</a> -->
+            </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+
+    <!-- Add certificate-->
+    <section class="project py-5" id="cert">
+      <div class="container">
+              
+              <div class="row">
+                <div class="col-lg-11 text-center mx-auto col-12">
+
+                    <div class="col-lg-8 mx-auto">
+                      <h2>Certificates</h2>
+                    </div>
+
+                    <div class="owl-carousel owl-theme">
+                      <div class="item">
+                        <div class="project-info">
+                          <img src="images/project/ds.jpg" class="img-fluid" alt="project image" style="padding: 35px;">
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="project-info">
+                          <img src="images/project/python.jpg" class="img-fluid" alt="project image" style="padding: 35px;">
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="project-info">
+                          <img src="images/project/cisco1.jpg" class="img-fluid" alt="project image" style="padding: 35px;">
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="project-info">
+                          <img src="images/project/soft skill.jpg" class="img-fluid" alt="project image" style="padding: 35px;">
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="project-info">
+                          <img src="images/project/lal.jpg" class="img-fluid" alt="project image" style="padding: 35px;">
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+              </div>
+      </div>
+  </section>
 
 
 
+
+    <!-- CONTACT -->
+    <section class="contact py-5" id="contact">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-5 mr-lg-5 col-12">
+            <div class="google-map w-100">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d876.4523349445052!2d77.17810072920324!3d28.515383498904043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1e11e9f02893%3A0x4cfb22ed56dcd02d!2sKalka%20Das%20Marg%2C%20Aam%20Bagh%2C%20Gandhi%20Colony%2C%20Mehrauli%2C%20New%20Delhi%2C%20Delhi%20110016!5e0!3m2!1sen!2sin!4v1651132444938!5m2!1sen!2sin" width="400" height="300" frameborder="0" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
+                <div class="contact-info-item">
+                  <h3 class="mb-3 text-white">Say hello</h3>
+                  <p class="footer-text mb-0">+91 7011-933-513</p>
+                  <p><a href="mailto:rishav.dgi@gmail.com">rishav.dgi@gmail.com</a></p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-12">
+            <div class="contact-form">
+              <h2 class="mb-4">Interested to work together? Let's Connect</h2>
+              <a href="https://www.linkedin.com/in/rishav2022/" target="_blank" class="fa fa-icon fa-linkedin"></a>
+              <a href="https://www.instagram.com/rishavspace/" target="_blank" class="fa fa-icon fa-instagram"></a>
+              <a href="mailto:rishav.dgi@gmail.com" class="fa fa-icon fa-envelope"></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- FOOTER -->
+     <footer class="footer py-5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-lg-12 col-12">                                
+                        <p class="copyright-text text-center">Copyright &copy; 2022 | All rights reserved</p>
+                        <p class="copyright-text text-center">Designed by <a rel="nofollow" href="https://www.linkedin.com/in/rishav2022/">Rishav Kumar</a></p>
+
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+
+  </body>
 </html>
